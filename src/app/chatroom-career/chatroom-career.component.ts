@@ -3,11 +3,11 @@ import { FileUpload } from '../services/fileupload';
 import { UploadFileService } from '../services/upload-file.service';
 
 @Component({
-  selector: 'app-chatroom',
-  templateUrl: './chatroom.component.html',
-  styleUrls: ['./chatroom.component.css']
+  selector: 'app-chatroom-career',
+  templateUrl: './chatroom-career.component.html',
+  styleUrls: ['./chatroom-career.component.css']
 })
-export class ChatroomComponent implements OnInit, AfterViewChecked {
+export class ChatroomCareerComponent implements OnInit, AfterViewChecked {
 
   @ViewChild('scroller') private feedContainer: ElementRef;
 
@@ -25,4 +25,4 @@ export class ChatroomComponent implements OnInit, AfterViewChecked {
     this.scrollToBottom();
   }
 
-} 
+}

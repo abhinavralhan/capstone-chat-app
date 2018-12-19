@@ -40,6 +40,26 @@ export class ChatService {
     return this.db.list(path);
   }
 
+  sendMessage(msg: string) {
+    const timestamp = this.getTimeStamp();
+    const email = this.user.email;
+    this.chatMessages = this.getMessage();
+    this.chatMessages.push({
+      message: msg,
+      timeSent: timestamp,
+      userName: this.userName,
+      email: email });
+  }
+
+  getMessage(): FirebaseListObservable<ChatMessage[]> {
+    return this.db.list('message', {
+      query: {
+        limitToLast: 25,
+        orderByKey: true
+      }
+    });
+  }
+
   sendMessageCareer(msg: string) {
     const timestamp = this.getTimeStamp();
     const email = this.user.email;
@@ -62,7 +82,7 @@ export class ChatService {
   sendMessageGaming(msg: string) {
     const timestamp = this.getTimeStamp();
     const email = this.user.email;
-    this.chatMessages = this.getMessageCareer();
+    this.chatMessages = this.getMessageGaming();
     this.chatMessages.push({
       message: msg,
       timeSent: timestamp,
@@ -81,7 +101,7 @@ export class ChatService {
   sendMessageMovies(msg: string) {
     const timestamp = this.getTimeStamp();
     const email = this.user.email;
-    this.chatMessages = this.getMessageCareer();
+    this.chatMessages = this.getMessageMovies();
     this.chatMessages.push({
       message: msg,
       timeSent: timestamp,

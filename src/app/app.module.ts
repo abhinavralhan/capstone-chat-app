@@ -12,7 +12,9 @@ import { NgxUploaderModule } from 'ngx-uploader';
 
 import { AppComponent } from './app.component';
 import { ChatFormComponent } from './chat-form/chat-form.component';
+import { ChatFormCareerComponent } from './chat-form-career/chat-form-career.component';
 import { ChatroomComponent } from './chatroom/chatroom.component';
+import { ChatroomCareerComponent } from './chatroom-career/chatroom-career.component';
 import { FeedComponent } from './feed/feed.component';
 import { FeedMoviesComponent } from './feed-movies/feed-movies.component';
 import { FeedGamingComponent } from './feed-gaming/feed-gaming.component';
@@ -37,7 +39,9 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     ChatFormComponent,
+    ChatFormCareerComponent,
     ChatroomComponent,
+    ChatroomCareerComponent,
     FeedComponent,
     MessageComponent,
     LoginFormComponent,

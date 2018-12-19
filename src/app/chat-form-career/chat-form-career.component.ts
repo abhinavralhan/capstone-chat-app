@@ -5,12 +5,12 @@ import { UploadFileService } from '../services/upload-file.service';
 import { FileUpload } from '../services/fileupload';
 
 @Component({
-  selector: 'app-chat-form',
-  templateUrl: './chat-form.component.html',
-  styleUrls: ['./chat-form.component.css']
+  selector: 'app-chat-form-career',
+  templateUrl: './chat-form-career.component.html',
+  styleUrls: ['./chat-form-career.component.css']
 })
 
-export class ChatFormComponent implements OnInit {
+export class ChatFormCareerComponent implements OnInit {
 
    message: string;
 
@@ -24,7 +24,7 @@ export class ChatFormComponent implements OnInit {
   }
 
   send() {
-    this.chat.sendMessage(this.message);
+    this.chat.sendMessageCareer(this.message);
     this.message = '';
   }
 

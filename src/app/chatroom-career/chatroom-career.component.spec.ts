@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeedGamingComponent } from './feed-gaming.component';
+import { ChatroomCareerComponent } from './chatroom-career.component';
 
-describe('FeedGamingComponent', () => {
-  let component: FeedGamingComponent;
-  let fixture: ComponentFixture<FeedGamingComponent>;
+describe('ChatroomCareerComponent', () => {
+  let component: ChatroomCareerComponent;
+  let fixture: ComponentFixture<ChatroomCareerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FeedGamingComponent ]
+      declarations: [ ChatroomCareerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FeedGamingComponent);
+    fixture = TestBed.createComponent(ChatroomCareerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
