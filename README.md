@@ -1,3 +1,7 @@
+# Chat Application
+
+Find final application on 'abhinav' branch. Follow the below instructions to run it. Enjoy.
+
 ## Setup
 
 Run `git clone https://github.com/abhinavralhan/capstone-chat-app/tree/abhinav`
