@@ -24,6 +24,13 @@
     font-weight: bold;
 }
 
+.btn-group{
+    padding-top: 12px;
+    padding-right: 600px;
+    white-space: nowrap;
+    display: block;
+}
+
 .links{
     padding-top: 32px;
     padding-right: 30px;

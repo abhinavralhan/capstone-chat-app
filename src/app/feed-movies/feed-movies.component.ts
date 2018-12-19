@@ -5,21 +5,21 @@ import { ChatMessage } from '../models/chat-message.model';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-feed',
-  templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css']
+  selector: 'app-feed-movies',
+  templateUrl: './feed-movies.component.html',
+  styleUrls: ['./feed-movies.component.css']
 })
-export class FeedComponent implements OnInit, OnChanges {
+export class FeedMoviesComponent implements OnInit, OnChanges {
   feed: FirebaseListObservable<ChatMessage[]>;
 
   constructor(private chat: ChatService) { }
 
   ngOnInit() {
-    this.feed = this.chat.getMessageCareer();
+    this.feed = this.chat.getMessageMovies();
   }
 
   ngOnChanges() {
-    this.feed = this.chat.getMessageCareer();
+    this.feed = this.chat.getMessageMovies();
   }
 
 }

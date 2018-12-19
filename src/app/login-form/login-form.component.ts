@@ -19,4 +19,10 @@ export class LoginFormComponent {
     this.authService.login(this.email, this.password)
     .catch(error => this.errorMsg = error.message);
   }
+  tryGoogleLogin(){
+    this.authService.doGoogleLogin()
+    .then(res => {
+        this.router.navigate(['/chat']); 
+      })
+  }
 }

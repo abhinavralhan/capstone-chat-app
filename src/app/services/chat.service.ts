@@ -40,10 +40,10 @@ export class ChatService {
     return this.db.list(path);
   }
 
-  sendMessage(msg: string) {
+  sendMessageCareer(msg: string) {
     const timestamp = this.getTimeStamp();
     const email = this.user.email;
-    this.chatMessages = this.getMessages();
+    this.chatMessages = this.getMessageCareer();
     this.chatMessages.push({
       message: msg,
       timeSent: timestamp,
@@ -51,8 +51,46 @@ export class ChatService {
       email: email });
   }
 
-  getMessages(): FirebaseListObservable<ChatMessage[]> {
-    return this.db.list('messages', {
+  getMessageCareer(): FirebaseListObservable<ChatMessage[]> {
+    return this.db.list('messageCareer', {
+      query: {
+        limitToLast: 25,
+        orderByKey: true
+      }
+    });
+  }
+  sendMessageGaming(msg: string) {
+    const timestamp = this.getTimeStamp();
+    const email = this.user.email;
+    this.chatMessages = this.getMessageCareer();
+    this.chatMessages.push({
+      message: msg,
+      timeSent: timestamp,
+      userName: this.userName,
+      email: email });
+  }
+
+  getMessageGaming(): FirebaseListObservable<ChatMessage[]> {
+    return this.db.list('messageGaming', {
+      query: {
+        limitToLast: 25,
+        orderByKey: true
+      }
+    });
+  }
+  sendMessageMovies(msg: string) {
+    const timestamp = this.getTimeStamp();
+    const email = this.user.email;
+    this.chatMessages = this.getMessageCareer();
+    this.chatMessages.push({
+      message: msg,
+      timeSent: timestamp,
+      userName: this.userName,
+      email: email });
+  }
+
+  getMessageMovies(): FirebaseListObservable<ChatMessage[]> {
+    return this.db.list('messageMovies', {
       query: {
         limitToLast: 25,
         orderByKey: true

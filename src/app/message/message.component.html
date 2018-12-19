@@ -6,7 +6,7 @@
             [ngClass]="{'isOwnSender':isOwnMessage}">
             {{ userName }}
         </span>
-        <span class="timestamp" 
+        <span class="timestamp"
             [ngClass] = "{'isOwnTimestamp':isOwnMessage}">
             {{ timeStamp | date:'medium' }}
         </span>
@@ -15,4 +15,4 @@
         [ngClass]="{'isOwnMessageContent':isOwnMessage}">
         {{ messageContent }}
     </div>
-</div>
+</div>  

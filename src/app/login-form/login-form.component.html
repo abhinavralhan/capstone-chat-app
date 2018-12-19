@@ -1,19 +1,25 @@
 <div class="container">
   <div class="loginCard">
     <h2 class="heading">Log In</h2>
-      <input 
+      <input
         [(ngModel)]="email"
-        type="email" 
-        name="email" 
+        type="email"
+        name="email"
         class="formInput" />
-      <input type="password" 
+      <input type="password"
         [(ngModel)]="password"
-        name="password" 
+        name="password"
         class="formInput" />
-      <button class="btn" 
-              id="btn-login" 
+      <button class="btn"
+              id="btn-login"
               (click)="login()">
               Log In
       </button>
+      <button type="button"
+              class="btn btn-danger btn-block"
+              (click)="tryGoogleLogin()">
+              Login with Google
+      </button>
+
   </div>
 </div>

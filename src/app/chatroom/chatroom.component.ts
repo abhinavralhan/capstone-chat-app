@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, Input } from '@angular/core';
+import { FileUpload } from '../services/fileupload';
+import { UploadFileService } from '../services/upload-file.service';
 
 @Component({
   selector: 'app-chatroom',
@@ -6,6 +8,7 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked } from '@ang
   styleUrls: ['./chatroom.component.css']
 })
 export class ChatroomComponent implements OnInit, AfterViewChecked {
+
   @ViewChild('scroller') private feedContainer: ElementRef;
 
   constructor() { }
@@ -21,4 +24,5 @@ export class ChatroomComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
     this.scrollToBottom();
   }
+
 }

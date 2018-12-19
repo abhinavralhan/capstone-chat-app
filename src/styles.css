@@ -12,7 +12,7 @@ body{
     background: #eee;
     background-attachment: fixed;
     background-size: cover;
-    font-family: "Open Sans",sans-serif; 
+    font-family: "Open Sans",sans-serif;
 }
 
 app-chatroom{
@@ -28,7 +28,7 @@ app-chat-form{
     width: 100%;
     display: flex;
     white-space: nowrap;
-    overflow: none; 
+    overflow: none;
 }
 
 .message{

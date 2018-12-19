@@ -1,6 +1,23 @@
 <div class="navBar">
-    <div id="logo"></div>
     <div id="heading"><a routerLink="/">Chatapp</a></div>
+
+    <div class="btn-group" dropdown>
+      <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+              aria-controls="dropdown-basic">
+              Choose Chat Room
+        <span class="caret"></span>
+      </button>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="btn btn-primary dropdown-item" href="/chat-career">Career</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="btn btn-primary dropdown-item" href="/chat-gaming">Gaming</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="btn btn-primary dropdown-item" href="/chat-movies">Movies</a></li>
+
+      </ul>
+    </div>
+
   <div class="links">
     <span>
       <a *ngIf="!(user|async)?.uid" href="#" (click)="login()">Login</a>
