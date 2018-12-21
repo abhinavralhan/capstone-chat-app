@@ -1,6 +1,6 @@
 # Chat Application
 
-Find final application on 'abhinav' branch. Follow the below instructions to run it. Enjoy.
+Find final application on 'abhinav' branch. Follow the below instructions to run it. Enjoy. Deployed on Heroku at `https://chatppnodejs.herokuapp.com/`
 
 ## Setup
 
